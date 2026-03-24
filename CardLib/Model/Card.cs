@@ -13,11 +13,13 @@ internal class Card
         Name = name;
         Description = description;
         Value = value;
-        Efect = efect;
+        Effect = efect;
     }
 
     public string Name { get; set; }
     public string Description { get; set; }
     public Object Value { get; set; }
-    public ICollection<Object> Efect { get; set; }
+    public ICollection<Object> Effect { get; set; }
+
+    
 }

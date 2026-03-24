@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CardLib.Model;
 
-internal class Deck
+internal struct Deck
 {
     public List<Card> Cards { get; set; }
 }

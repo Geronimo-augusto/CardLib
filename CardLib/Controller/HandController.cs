@@ -9,21 +9,26 @@ namespace CardLib.Controller;
 
 internal class HandController
 {
-    public List<Card> ChosenHand(Hand hand, Deck deck)
+    public List<Card> ChosenHand(Player player, Deck deck)
     {
         Random random = new Random();
-        while(hand.Cards.Count < hand.CardLimit)
+        while(player.Hand.Count < player.CardLimit)
         {
             int escolha = random.Next(0,deck.Cards.Count+1);
             List<Card> possibilidade = deck.Cards;
 
-            hand.Cards.Add(possibilidade[escolha]);
+            player.Hand.Add(possibilidade[escolha]);
 
         }
 
 
-
-        hand.Cards = deck.Cards;
-        return hand.Cards;
+        return player.Hand;
     }
+
+    public void Jogar(Player player)
+    {
+
+    }
+
+
 }
